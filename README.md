@@ -2,7 +2,7 @@
 
 A project to enable infrared code playback via a single digital pin on
 the [Arduino101](https://www.arduino.cc/en/Main/ArduinoBoard101) 
-development board and a [lirc](www.lirc.org)-like input format.
+development board and a [lirc](http://www.lirc.org)-like input format.
 
 # Hardware requirements
 

@@ -153,6 +153,6 @@ void sendRemoteCode(const LircRemote* remote, int codeIndex, int pin)
   // @todo: assert no buffer overflow.
 
   // Send the code.
-  sendRawCodes(buf, bufLen, pin);
+  sendRawCode(buf, bufLen, pin);
 }
 
