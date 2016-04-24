@@ -24,9 +24,9 @@
 
 /*****************   HELPER FUNCTIONS  ********************/
 
-void delayMicrosecondsWithPulse(int duration, int pin)
+void delayMicrosecondsWithPulse(uint32_t duration, int pin)
 {
-  long toggleCount = ((long)(duration * TOGGLES_PER_SECOND) / US_PER_SEC)+1;
+  uint32_t toggleCount = ((uint32_t)(duration * TOGGLES_PER_SECOND) / US_PER_SEC)+1;
   bool GpioPinDriveHigh = true;
 
   while (toggleCount) {
