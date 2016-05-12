@@ -1,4 +1,4 @@
-/* LircPlayer101.h - Header for infrared bit banger on Arduino101
+/* LircRemote101.h - Header for infrared bit banger on Arduino101
  *
  * Copyright (C) 2016 David Antler
  * All rights reserved.
