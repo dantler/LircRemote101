@@ -1,4 +1,4 @@
-/* LircPlayer101.c - Infrared bit banger on Arduino101
+/* LircRemote101.c - Infrared bit banger on Arduino101
  *
  * Copyright (C) 2016 David Antler
  * All rights reserved.
@@ -8,7 +8,7 @@
  */
 
 #include "Arduino.h"
-#include "LircPlayer101.h"
+#include "LircRemote101.h"
 
 #define INFRARED_HZ         38000
 #define TOGGLES_PER_SECOND  (2 * INFRARED_HZ) /* Up AND down; e.g., one HZ would have 2 toggles per second */
