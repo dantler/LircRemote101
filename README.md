@@ -1,6 +1,6 @@
 # LircRemote101
 
-A project to enable infrared code playback via a single digital pin on
+A project to enable infrared code playback using any single digital pin on
 the [Arduino101](https://www.arduino.cc/en/Main/ArduinoBoard101) 
 development board and a [lirc](http://www.lirc.org)-like input format.
 
@@ -10,6 +10,26 @@ development board and a [lirc](http://www.lirc.org)-like input format.
 - Infrared LED 950nm
 - Resistor
 - Power source (USB will work)
+
+## Recommended hardware setup
+
+Connect a circuit which looks like this:
+
+```
+ Digital                                            Ground
+  pin 13
+
+ +-----+     +------------+     +--------------+    |
+ |     |     |            |     |              |    |  |
+ |     +-----+ + IR LED - +-----+  73 Ohm Res  +----+--+-|
+ |     |     |            |     |              |    |  |
+ +-----+     +------------+     +--------------+    |
+```
+
+# Installation
+
+Download the ZIP and install using the Arduino IDE.  Alternative 
+installation instructions may be found [here](https://www.arduino.cc/en/Guide/Libraries).
 
 # Usage
 
@@ -34,7 +54,7 @@ used by [lirc](http://lirc.org/html/lircd.conf.html) under
 ```c
   #define _countof(_Array) (sizeof(_Array) / sizeof(_Array[0]))
 
-  int GPIO_PIN = 3; // The pin your IRLED is using.
+  int GPIO_PIN = 13; // The pin your IRLED is using.
 
   const unsigned short  kanto_yu5_power[] = {
    9023,    4565,     533,     597,     490,     618,
@@ -99,7 +119,7 @@ passing in your structure to the `sendRemoteCode` function.
     MODE
   } AirconButton;
 
-  int GPIO_PIN = 3; // The pin your IRLED is using.
+  int GPIO_PIN = 13; // The digital pin your IRLED is using.
 
   sendRemoteCode(&fedders_aircon, ON_OFF, GPIO_PIN);
 ```
