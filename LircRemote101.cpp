@@ -21,6 +21,9 @@
 // It's our magic number to get us down to 38KHz.
 #define TICKS_PER_TOGGLE_FUDGE_FACTOR   100
 
+#if !defined(ARDUINO_ARCH_ARC32)
+  #warning "This library only supports the Arduino101/Genuino101. More details: https://github.com/dantler/LircRemote101/issues/1"
+#endif
 
 /*****************   HELPER FUNCTIONS  ********************/
 
